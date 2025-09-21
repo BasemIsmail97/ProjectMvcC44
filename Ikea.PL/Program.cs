@@ -31,6 +31,7 @@ namespace Ikea.PL
             #region Employee Service
             builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+            builder.Services.AddAutoMapper(e=>e.AddProfile(new IKEA.BLL.Profiles.EmployeeMappingProfile()));
             #endregion
 
             #endregion

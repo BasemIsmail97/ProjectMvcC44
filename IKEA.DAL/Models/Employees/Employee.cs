@@ -9,18 +9,18 @@ namespace IKEA.DAL.Models.Employees
 {
    public  enum EmployeeType
     {
-        FullTime,
-        PartTime,
+        FullTime=1,
+        PartTime=2,
        
     }
   public  enum Gender
     {
-        Male,
-        Female,
+        Male=1,
+        Female=2,
     }
-    public class Employee
+    public class Employee : ModelBase
     {
-        public int Id { get; set; }
+       
         public string Name { get; set; } =null!;
         [EmailAddress]
         public string? Email { get; set; } = null!;
@@ -31,10 +31,10 @@ namespace IKEA.DAL.Models.Employees
         public bool IsActive { get; set; }
         public decimal Salary { get; set; }
         public string? PhoneNumber { get; set; }
-        public DateTime HiringDate { get; set; }
-        public EmployeeType EmployeeType { get; set; }
+        public DateTime? HiringDate { get; set; }
+        public string EmployeeType { get; set; }
 
-        public Gender Gender { get; set; }
+        public string Gender { get; set; }
 
 
 

@@ -16,11 +16,16 @@ namespace IKEA.BLL.DTOS.Employee
         
         [Range(24, 50, ErrorMessage = "Age must be between 24 and 50")]
         public int Age { get; set; }
-      
+        public bool IsActive { get; set; }
+        [EmailAddress]
+        public string? Email { get; set; }
+
+        [DataType(DataType.Currency)]
         public decimal Salary { get; set; }
        
       
-        public EmployeeType EmployeeType { get; set; }
+        public string EmployeeType { get; set; }
+        public string Gender { get; set; }
 
        
     }

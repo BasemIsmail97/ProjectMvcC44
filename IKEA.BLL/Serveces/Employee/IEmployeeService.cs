@@ -4,10 +4,10 @@ namespace IKEA.BLL.Serveces.Employee
 {
     public interface IEmployeeService
     {
-        int AddEmployee(EmployeeDetailsDto employeeDetails);
+        int AddEmployee(CreatedEmployeeDto employeeDetails);
         bool DeleteEmployee(int id);
         IEnumerable<EmployeeDto> GetAllEmployees();
         EmployeeDetailsDto GetEmployeeById(int id);
-        int UpdateEmployee(EmployeeDetailsDto employeeDetails);
+        int UpdateEmployee(UpdatedEmployeeDto employeeDetails);
     }
 }

@@ -2,12 +2,8 @@
 
 namespace IKEA.DAL.Repositories.Department
 {
-    public interface IDepartmentRepo
+    public interface IDepartmentRepo : IKEA.DAL.Repositories.Interfaces.IGenericRepository<IKEA.DAL.Models.Departments.Department>
     {
-        int Add(Models.Departments.Department department);
-        int Delete(Models.Departments.Department department);
-        IEnumerable<Models.Departments.Department> GetAll(bool WithTracking = false);
-        Models.Departments.Department? GetById(int id, bool WithTracking = false);
-        int Update(Models.Departments.Department department);
+       
     }
 }

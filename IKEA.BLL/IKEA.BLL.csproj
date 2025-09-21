@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.0.1" />
+    <PackageReference Include="Bootstrapper.AutoMapper" Version="2.0.3.14" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\IKEA.DAL\IKEA.DAL.csproj" />
   </ItemGroup>
 
